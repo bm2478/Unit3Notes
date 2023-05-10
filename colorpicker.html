@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-
-    </script>
+    <style>
+        .red{
+            background-color:red;
+        }
+        .green{
+            background-color:green;
+        }
+        .blue{
+            background-color:blue;
+        }
+        .pink{
+            background-color:pink;
+        }
+        .teal{
+            background-color:teal;
+        }
+        .purple{
+            background-color:purple;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -35,12 +52,51 @@
     const red = document.getElementById('1');
     const green = document.getElementById('2');
     const blue = document.getElementById('3');
-
     const pink = document.getElementById('4');
     const teal = document.getElementById('5');
     const purple = document.getElementById('6');
-
     const clearButton = document.getElementById('clear');
+
+    red.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('red');
+    })
+    green.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('green');
+    })
+    blue.addEventListener('click', function(e){
+        removeBGColor();
+        content.classList.add('blue');
+    })
+    pink.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('pink');
+    })
+    teal.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('teal');
+    })
+    purple.addEventListener('click', function(e){
+        removeTextColor();
+        content.classList.add('purple');
+    })
+
+    function removeBGColor() {
+        content.classList.remove('red');
+        content.classList.remove('green');
+        content.classList.remove('blue');
+    }
+    function removeTextColor() {
+        content.classList.remove('pink');
+        content.classList.remove('teal');
+        content.classList.remove('purple');
+    }
+
+    clearButton.addEventListener('click', function(e){
+        removeTextColor();
+        removeBGColor();
+    });
 </script>
 </body>
 </html>
