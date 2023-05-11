@@ -55,18 +55,18 @@
             <button id="1">Red</button>
             <button id="2">Green</button>
             <button id="3">Blue</button>
-            <button id="7">Pink</button>
-            <button id="8">Teal</button>
-            <button id="9">Purple</button>
+            <button id="7">orange</button>
+            <button id="8">grey</button>
+            <button id="9">brown</button>
         </div>
         <div class="row">
             <h3>Text</h3>
             <button id="4">Pink</button>
             <button id="5">Teal</button>
             <button id="6">Purple</button>
-            <button id="10">Pink</button>
-            <button id="11">Teal</button>
-            <button id="12">Purple</button>
+            <button id="10">lime</button>
+            <button id="11">deepink</button>
+            <button id="12">yellow</button>
         </div>
 
         <button id="clear">CLEAR</button>
@@ -141,11 +141,17 @@
         content.classList.remove('red');
         content.classList.remove('green');
         content.classList.remove('blue');
+        content.classList.remove('orange');
+        content.classList.remove('grey');
+        content.classList.remove('brown');
     }
     function removeTextColor() {
         content.classList.remove('pink');
         content.classList.remove('teal');
         content.classList.remove('purple');
+        content.classList.remove('lime');
+        content.classList.remove('deeppink');
+        content.classList.remove('yellow');
     }
 
     clearButton.addEventListener('click', function(e){
