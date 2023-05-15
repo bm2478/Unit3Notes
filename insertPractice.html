@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h3>What is this?</h3>
+        <h4>I dont want this</h4>
+    </div>
+</div>
+<script>
+    const content = document.querySelector('.content');
+    content.innerHTML = '<h1 id="lose">I love Zelda</h1><h4 class="gone">More words</h4>';
+
+    const zelda = document.createElement('h1');
+    zelda.innerHTML = 'I love Zelda';
+    content.appendChild(zelda);
+
+    const sins = document.createElement('h1');
+    sins.innerHTML = 'Sins is every job';
+    content.appendChild(sins);
+
+    const collectable = document.createElement('h1');
+    collectable.innerHTML = 'A collectable';
+    content.appendChild(collectable);
+
+    const soccer = document.createElement('h1');
+    soccer.innerHTML = 'Imma a gk';
+    content.appendChild(soccer);
+
+    const food = document.createElement('h1');
+    food.innerHTML = 'I love Pizza';
+    content.insertAdjacentElement('afterbegin',food);
+
+    const drink = document.createElement('h1');
+    drink.innerHTML = 'Sprite';
+    content.insertAdjacentElement('afterend',drink);
+
+    const unwantedElement = document.querySelector('h4');
+    unwantedElement.remove();
+
+    const unwantedElement2 = document.querySelector('#lose');
+    unwantedElement2.remove();
+
+    const unwantedElement3 = document.querySelector('.gone');
+    unwantedElement3.remove();
+</script>
+</body>
+</html>
